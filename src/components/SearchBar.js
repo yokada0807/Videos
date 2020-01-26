@@ -6,9 +6,9 @@ class SearchBar extends React.Component {
   };
 
   onInputChange = (event) => {
-    console.log("onInputChange")
+    // console.log("onInputChange")
     this.setState({ term: event.target.value});
-    console.log(this.state.term)
+    // console.log(this.state.term)
   }
 
   onFormSubmit = event => {
@@ -16,6 +16,7 @@ class SearchBar extends React.Component {
 
     // TODO: Make sure we call
     // callback from parent component
+    this.props.onFormSubmit(this.state.term);
   }
 
   render() {
