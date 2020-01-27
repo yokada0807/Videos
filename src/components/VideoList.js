@@ -1,13 +1,14 @@
 import React from 'react';
 import VideoItem from './VideoIItem';
 
-const VideoList = ({videos}) => {
+const VideoList = ({videos, onVideoSelect}) => {
+    // props.videos
+  // {} is supposed to be props?
 
   const renderedList = videos.map( video => {
-    return <VideoItem  video={video}/>;
+    return <VideoItem onVideoSelect={onVideoSelect} video={video}/>;
   });
-  // props.videos
-  // {} is supposed to be props?
+
   return (
     <div className="ui relaxed divided list">
       {renderedList}
