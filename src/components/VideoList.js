@@ -6,7 +6,10 @@ const VideoList = ({videos, onVideoSelect}) => {
   // {} is supposed to be props?
 
   const renderedList = videos.map( video => {
-    return <VideoItem onVideoSelect={onVideoSelect} video={video}/>;
+    return <VideoItem
+      key={video.id.videoId}
+      onVideoSelect={onVideoSelect} 
+      video={video}/>;
   });
 
   return (
